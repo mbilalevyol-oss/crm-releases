@@ -1,0 +1,111 @@
+<!doctype html>
+<!--
+  Public download page for the Windows app, served by GitHub Pages from the
+  releases repo. TEMPLATE: the double-underscore placeholders are filled in and
+  the result pushed as index.html by .github/workflows/windows-release.yml.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Evyol for Windows</title>
+  <meta name="description" content="Download the Hello Evyol app for Windows.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --card: #ffffff;
+      --text: #1f2421;
+      --muted: #5a5a5a;
+      --border: #e0e0e0;
+      --brand: #1c602b;
+      --brand-hover: #164d22;
+      --accent: #ea6914;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121513;
+        --card: #1b201c;
+        --text: #eef1ee;
+        --muted: #a7ada8;
+        --border: #2c332d;
+        --brand: #2e8a43;
+        --brand-hover: #37a050;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px 16px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+      line-height: 1.5;
+    }
+    main {
+      width: 100%;
+      max-width: 440px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 28px 28px;
+      text-align: center;
+    }
+    .logo { width: 88px; height: 88px; border-radius: 18px; }
+    h1 { margin: 16px 0 4px; font-size: 28px; }
+    .sub { margin: 0 0 28px; color: var(--muted); }
+    .download {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 12px;
+      background: var(--brand);
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .download:hover { background: var(--brand-hover); }
+    .download:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .meta { margin: 10px 0 0; font-size: 13px; color: var(--muted); }
+    ol {
+      margin: 28px 0 0;
+      padding: 20px 20px 20px 40px;
+      text-align: left;
+      border-top: 1px solid var(--border);
+    }
+    li { margin: 6px 0; }
+    .note { margin: 8px 0 0; font-size: 13px; color: var(--muted); text-align: left; }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="logo.png" alt="">
+    <h1>Hello Evyol</h1>
+    <p class="sub">for Windows 10 and 11</p>
+
+    <a class="download" href="https://github.com/mbilalevyol-oss/crm-releases/releases/download/windows/Install-HelloEvyol.cmd">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+      Download for Windows
+    </a>
+    <p class="meta">Version 1.0.51.0 &middot; Updated 6 Oct 2026</p>
+
+    <ol>
+      <li>Open the downloaded file <b>Install-HelloEvyol</b>.</li>
+      <li>Click <b>Yes</b> when Windows asks to allow changes.</li>
+      <li>Click <b>Install</b>.</li>
+    </ol>
+    <p class="note">
+      If Windows says &ldquo;Windows protected your PC&rdquo;, click
+      <b>More info</b> &rarr; <b>Run anyway</b>. After installing, the app
+      updates itself automatically.
+    </p>
+  </main>
+</body>
+</html>
